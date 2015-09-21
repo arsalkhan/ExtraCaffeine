@@ -1,0 +1,6 @@
+// Auto generated file or "Don't mess with me!" file. Whatever you feel comfortable with.
+
+$sprite-map: (
+	  sprite: (width: {{spriteWidth}}px, height: {{spriteHeight}}px, pngPath: '../images/sprite.png', svgPath: '../images/sprite.svg'),
+{{#shapes}} 	{{base}}: (width: {{width.inner}}px, height: {{height.inner}}px, backgroundX: {{position.absolute.x}}px, backgroundY: {{position.absolute.y}}px),
+{{/shapes}});

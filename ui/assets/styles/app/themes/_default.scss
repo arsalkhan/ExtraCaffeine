@@ -1,0 +1,31 @@
+/* Default Theme */
+
+
+// other
+$clr-light: $white;
+$clr-dark: $black;
+
+// corporate colors
+$clr-pri: $black;
+$clr-sec: $gray-light;
+$clr-accent: $black;
+
+// fonts
+$f-font1: font1, $sans-serif;
+$f-font2: font2, $serif;
+
+
+
+// mozilla firefox */
+::-moz-selection {
+    color: $clr-sec;
+    background: $clr-pri;
+    text-shadow: none;
+}
+
+// webkit, opera, IE9 */
+::selection {
+    color: $clr-sec;
+    background: $clr-pri;
+    text-shadow: none;
+}
