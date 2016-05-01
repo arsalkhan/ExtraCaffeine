@@ -1,0 +1,11 @@
+// the typography goesright here
+.brand {
+	text-align: center;
+	margin-top: 40px;
+	.brand__name {
+		font-size: em(40);
+	}
+	.brand__slogan {
+		font-size: em(14);
+	}
+}

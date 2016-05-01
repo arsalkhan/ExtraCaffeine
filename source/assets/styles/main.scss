@@ -1,0 +1,15 @@
+// Import Settings
+@import "lib";
+// Import Vendors
+@import "vendor";
+
+@import 'app/app-config'; // breakpoints - and other settings which aint related to theming
+
+// Import Theme
+@import "themes/default";
+
+// Import app partials
+@import "app";
+
+// Import modules
+@import "modules";

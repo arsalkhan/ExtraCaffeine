@@ -1,0 +1,160 @@
+//------------------------------------------------ Base
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+// mozilla firefox 
+::-moz-selection {
+    color: $clr-sec;
+    background: $clr-pri;
+    text-shadow: none;
+}
+
+// webkit, opera, IE9 
+::selection {
+    color: $clr-sec;
+    background: $clr-pri;
+    text-shadow: none;
+}
+
+// placeholders' styles
+::-webkit-input-placeholder {
+    color: $clr-sec;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: $clr-sec;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $clr-sec;
+}
+
+:-ms-input-placeholder {
+    color: $clr-sec;
+}
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    font-size: $base-font-size;
+}
+
+body {
+    margin: 0;
+    font-family: $sans-serif;
+    cursor: default;
+    text-shadow: none;
+}
+
+iframe {
+    border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+blockquote,
+figure,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+main,
+li {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    font-size: inherit;
+}
+
+strong {
+    font-weight: bold;
+}
+
+sup {
+    position: relative;
+    top: -.5em;
+    font-size: 65%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+a,
+button {
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    overflow: visible;
+    border: 0;
+    font: inherit;
+    letter-spacing: inherit;
+    background: none;
+    cursor: pointer;
+    -webkit-font-smoothing: inherit;
+    &:focus {
+        outline: 0;
+    }
+}
+
+::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+input[type=search] {
+    box-shadow: none; // overwrite firefox default box shadow on invalid search field
+}
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+// Upstream patch for normalize.css submitted: https://github.com/necolas/normalize.css/pull/379 - remove this fix once that is merged
+[role="button"] {
+    cursor: pointer;
+}
+
+input {
+    -webkit-appearance: none; // force iOS to not show rounded borders
+    &:focus {
+        outline: 0;
+    }
+}

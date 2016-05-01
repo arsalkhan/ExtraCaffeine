@@ -1,0 +1,14 @@
+.tabs {
+    
+    .tabs__tab {
+        display: inline-block;
+        text-transform: uppercase; 
+        vertical-align: middle;
+        padding: emify(5, 12) emify(10, 12);
+        i {
+            font-size: em(20,12);
+            padding-right: emify(10, 20);
+            vertical-align: middle;
+        }
+    }
+}

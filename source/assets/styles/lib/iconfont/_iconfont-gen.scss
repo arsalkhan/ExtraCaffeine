@@ -1,0 +1,27 @@
+
+$iconfont-family: 'Symbols';
+
+@import 'map/iconfont-template'; // import the map from site	
+
+//------------------------------------------------ Sets a font icon
+
+// See: https://github.com/jaydenseric/Barebones#create--use-font-icons
+
+@mixin iconfont($icon: false, $position: before, $styles: true) {
+	@if $position == both {
+		$position: 'before, &:after';
+	}
+	&::#{$position} {
+		@if $icon {
+			content: "#{map-get($iconfont-map, $icon)}";
+		}
+		@if $styles {
+			speak: none;
+			user-select: none;
+			font-style: normal;
+			font-weight: normal;
+			font-family: $iconfont-family;
+		}
+		@content;
+	}
+}

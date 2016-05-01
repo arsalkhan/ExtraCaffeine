@@ -1,0 +1,129 @@
+.card {
+    box-shadow: 1.8px 0.9px 8.9px 0.1px rgba(185, 185, 185, 0.83);
+    border-radius: $border-radius;
+    float: left;
+    // width: 370px;
+    // margin: 8px 0 13px;
+    margin: 10px;
+    width: 31%;
+    background-color: $white;
+    .card__header {
+        background-color: $clr-light;
+        border-bottom: $border-gray;
+        padding: 20px 15px;
+        display: block;
+        table-layout: fixed;
+        width: 100%;
+    }
+    .card__person-avatar {
+        display: table-cell;
+        vertical-align: middle;
+        width: 40px;
+    }
+    .card__details {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 14px;
+        font-size: em(14);
+    }
+    .card__person-name {
+        color: $black;
+        font-weight: 600;
+    }
+    .card__modification-time {
+        display: block;
+    }
+    .card__body {
+        border-bottom: $border-gray;
+        padding: 15px;
+    }
+    .card__file-name {
+        font-size: em(20);
+        display: block;
+        padding-bottom: 10px;
+    }
+    .card__file-details {
+        // display: table;
+        // width: 100%;
+        // table-layout: fixed;
+    }
+    .card__file-icon {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .card__file-type {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: em(14);
+        padding-left: 5px;
+    }
+    .card__file-creator {
+        display: table-cell;
+        vertical-align: middle;
+        color: $clr-links;
+        color: #2a5599;
+        font-size: em(14);
+        position: relative;
+        padding-left: 30px;
+        @extend %transition;
+        &:before {
+            position: absolute;
+            left: 10px;
+            top: 7px;
+            content: '';
+            // @include center(v);
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background-color: #d8dde6;
+            border-radius: 50%;
+            @extend %transition;
+        }
+        &:hover {
+            color: $clr-pri;
+            &:before {
+                width: 5px;
+                height: 5px;
+                top: 8px;
+                background-color: $clr-pri;
+            }
+        }
+    }
+    .card__footer {
+        padding: 10px 15px;
+    }
+    .card__like {}
+    .card__action {
+        vertical-align: middle;
+        display: inline-block;
+        padding: 4px;
+        font-size: em(18);
+        @extend %transition;
+        &:hover {
+            color: $clr-pri;
+        }
+    }
+    .card__like-number {
+        vertical-align: middle;
+        display: inline-block;
+        font-size: em(14);
+    }
+    .card__secondary-actions {
+        text-align: right;
+        float: right;
+    }
+    .card__tags {
+        font-size: em(10);
+        .tags {
+            padding: 0;
+        }
+    }
+}
+.card--new {
+    background-image: url('#{$path-images}/document-upload.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 31%;
+    height: 244px;
+    background-size: contain;
+}

@@ -1,0 +1,153 @@
+.globe-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.globe {
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -40px;
+  z-index: 99999;
+  @include transition;
+  border-radius: 50%;
+  &:hover {
+    // box-shadow: 0 0 0 20px #2A2E39, 0 0 0 21px #9BC4EB, 0 0 0 41px #2A2E39, 0 0 0 42px #8B9C52, 0 0 0 62px #2A2E39, 0 0 0 63px #ffffff;
+    transform: scale(2);
+  }
+}
+
+.globe--stretched {
+  width: 300%;
+  height: 300%;
+  margin-top: -150%;
+  margin-left: -150%;
+}
+
+figure {
+  width: 100%;
+  height: 100px;
+  #sea {
+    fill: #9BC4EB;
+  }
+  #hi {
+    fill: rgba(255, 255, 255, 0.2);
+  }
+  #light {
+    fill: white;
+  }
+  #shad {
+    fill: rgba(0, 0, 0, 0.05);
+  }
+  #land {
+    fill: #8B9C52;
+    -webkit-animation: spin 10s linear infinite forwards;
+    animation: spin 10s linear infinite forwards;
+  }
+  .vehicles use {
+    fill: #F0FBFC;
+    -webkit-animation: orbit 15s linear infinite;
+    animation: orbit 15s linear infinite;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+  #boat1 {
+    -webkit-transform: translateX(40px) translateY(-80px);
+    transform: translateX(40px) translateY(-80px);
+    use {
+      -webkit-animation-duration: 30s;
+      animation-duration: 30s;
+    }
+    // display: none;
+  }
+  #plane1 {
+    -webkit-transform: translateX(-10px) translateY(170px);
+    transform: translateX(-10px) translateY(170px);
+  }
+  #plane2 {
+    -webkit-transform: translateX(170px) translateY(150px);
+    transform: translateX(170px) translateY(150px);
+    use {
+      -webkit-animation-delay: 7.5s;
+      animation-delay: 7.5s;
+    }
+  }
+  #plane3 {
+    -webkit-transform: translateX(140px) translateY(-50px);
+    transform: translateX(140px) translateY(-50px);
+    use {
+      -webkit-animation-delay: 1.25s;
+      animation-delay: 1.25s;
+      -webkit-animation-duration: 12s;
+      animation-duration: 12s;
+    }
+  }
+  #bike1 {
+    // -webkit-transform: translateX(50px) translateY(190px);
+    // transform: translateX(50px) translateY(190px);
+    // use {
+    //   -webkit-animation-duration: 25s;
+    //   animation-duration: 25s;
+    // }
+    display: none;
+  }
+}
+
+@-webkit-keyframes orbit {
+  from {
+    -webkit-transform: rotate(0deg) translateX(-160px);
+    transform: rotate(0deg) translateX(-160px);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateX(-160px);
+    transform: rotate(360deg) translateX(-160px);
+  }
+}
+
+
+@keyframes orbit {
+  from {
+    -webkit-transform: rotate(0deg) translateX(-160px);
+    transform: rotate(0deg) translateX(-160px);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateX(-160px);
+    transform: rotate(360deg) translateX(-160px);
+  }
+}
+
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: translateX(-300px);
+    transform: translateX(-300px);
+  }
+
+  to {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+
+@keyframes spin {
+  from {
+    -webkit-transform: translateX(-300px);
+    transform: translateX(-300px);
+  }
+
+  to {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}

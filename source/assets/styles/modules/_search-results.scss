@@ -1,0 +1,12 @@
+.search-results {
+    padding: 0 25px;
+    .search-results__title {
+        font-size: em(20);
+        padding: 5px 0 12px;
+    }
+    .search-results__content {
+        @include clearfix();
+	    margin-left: -10px;
+	    margin-right: -10px;
+    }
+}

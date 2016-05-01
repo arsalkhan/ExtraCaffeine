@@ -1,0 +1,168 @@
+$clr-australia: #EAAD5C;
+$clr-south-america: #40D3B7;
+$clr-europe: #B3D887;
+$clr-asia: #6DC0EC;
+$clr-africa: #FEDB77;
+$clr-north-america: #EB7E7E;
+.continent {
+    cursor: pointer;
+    &.active {
+        fill: #ccc;
+    }
+}
+
+.map {
+    @include transition;
+    position: relative;
+    z-index: 1000;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.countries {
+	position: fixed;
+	width: 100%;
+	overflow: auto;
+	height: 100%;
+}
+
+.close-map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+// Continents
+.australia {
+    path {
+        fill: $clr-australia;
+    }
+    &:hover,
+    &.active {
+        path {
+            fill: darken($clr-australia, 10%);
+        }
+    }
+}
+
+.africa {
+    path {
+        fill: $clr-africa;
+    }
+    &:hover,
+    &.active {
+        path {
+            fill: darken($clr-africa, 10%);
+        }
+    }
+}
+
+.asia {
+    path {
+        fill: $clr-asia;
+    }
+    &:hover,
+    &.active {
+        path {
+            fill: darken($clr-asia, 10%);
+        }
+    }
+}
+
+.europe {
+    path {
+        fill: $clr-europe;
+    }
+    &:hover,
+    &.active {
+        path {
+            fill: darken($clr-europe, 10%);
+        }
+    }
+}
+
+.south-america {
+    path {
+        fill: $clr-south-america;
+    }
+    &:hover,
+    &.active {
+        path {
+            fill: darken($clr-south-america, 10%);
+        }
+    }
+}
+
+.north-america {
+    path {
+        fill: $clr-north-america;
+    }
+    &:hover,
+    &.active {
+        path {
+            fill: darken($clr-north-america, 10%);
+        }
+    }
+}
+
+.map--shrinked {
+    transform: scale(0.25);
+    position: relative;
+    top: 130px;
+    path {
+        stroke: #ccc;
+        fill: #2A2E39;
+    }
+	.continent.acive {
+		path {
+			stroke: none;
+		}
+	}
+}
+
+.countries-australia {
+	background: $clr-australia;
+	.item {
+		border: 5px solid $clr-australia;
+		
+	}
+}
+.countries-africa {
+	background: $clr-africa;
+	.item {
+		border: 5px solid $clr-africa;
+		
+	}
+}
+
+.countries-asia {
+	background: $clr-asia;
+	.item {
+		border: 5px solid $clr-asia;
+		
+	}
+}
+
+.countries-europe {
+	background: $clr-europe;
+	.item {
+		border: 5px solid $clr-europe;
+		
+	}
+}
+.countries-south-america {
+	background: $clr-south-america;
+	.item {
+		border: 5px solid $clr-south-america;
+		
+	}
+}
+.countries-north-america {
+	background: $clr-north-america;
+	.item {
+		border: 5px solid $clr-north-america;
+		
+	}
+}

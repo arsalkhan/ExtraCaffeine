@@ -1,0 +1,7 @@
+@import 'map/sprite'; // import the map from site
+
+$ieSprite: '.lt-ie9' !default;
+$sprite: map-get($sprite-map, sprite) !default;
+$baseFontSize: 16px !default;
+
+@import 'mixins';

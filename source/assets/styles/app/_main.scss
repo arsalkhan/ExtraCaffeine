@@ -1,0 +1,14 @@
+.page {
+    .page-header {
+        padding-top: emify(20, 10);
+        padding-bottom: emify(12, 10);
+        border-bottom: 1px solid $border-heading;
+        margin-bottom: emify(20, 10);
+    }
+    .page__title {
+        font-size: em(28, 10);
+        text-transform: uppercase;
+        font-weight: normal; 
+    }
+} 
+

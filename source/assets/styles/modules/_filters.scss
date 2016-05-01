@@ -1,0 +1,80 @@
+.filters {
+    text-align: right;
+    font-size: 1rem;
+    //height: 100%;
+    .filters__filter {
+        padding: emify(5, 12) emify(10, 12);
+        display: inline-block;
+        border-left: $border;
+        vertical-align: middle;
+        position: relative;
+        // padding: emify(10, 12);
+        &.is-active {
+            background: $clr-pri;
+            i,
+            .filter__label {
+                color: $white;
+            }
+        }
+    }
+    .filter__icon {
+        font-size: emify(20, 10);
+        padding-right: emify(5, 10);
+        vertical-align: middle;
+    }
+    .filter__label {
+        font-size: emify(11, 10);
+        font-weight: bold;
+        font-family: arial;
+    }
+    .filter__btn {
+        border-left: $border;
+        padding: emify(2, 10) emify(8, 10);
+        font-size: emify(22, 10);
+        vertical-align: middle;
+    }
+    .icon-arrow-down {
+        font-size: emify(1, 10);
+        margin-left: emify(10, 10);
+    }
+    @include respond-to(tablets) {
+        text-align: center;
+    }
+    .filter__dropdown {
+        position: absolute;
+        background: $white;
+        @extend %box-shadowTN;
+        width: 100%;
+        top: 33px;
+        padding: emify(10, 10);
+        text-align: left;
+        right: 0;
+        height: 300px;
+        border: 3px solid $clr-pri;
+        &.filter__hierarchy {
+            width: 275px;
+        }
+    }
+}
+
+//filter hierarchy
+.hierarchy-list {
+    ul {
+        li {
+            display: block;
+            a {
+                display: block;
+                padding: emify(7, 10) emify(10, 10);
+                border-top: 1px solid $border-clr;
+                position: relative;
+                @extend .icon-arrow-right;
+                &:before {
+                    position: absolute;
+                    font-size:1rem;
+                    right: 10px;
+                    color: $black;
+                }
+            }
+        }
+    }
+}

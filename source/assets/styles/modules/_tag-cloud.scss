@@ -1,0 +1,46 @@
+.tag-cloud {
+    margin: 0;
+    list-style: none;
+}
+
+.tag-cloud__tag {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 3px;
+    color: $clr-sec;
+    border: $border-gray;
+    background: $gray-light;
+    font-size: em(12);
+    margin: 3px;
+    @extend %transition;
+    &:hover {
+        background: darken($gray-light, 5%);
+        .tag-cloud__tag-count {
+            background: darken($clr-sec, 5%);
+        }
+    }
+}
+
+.tag-cloud__tag-label,
+.tag-cloud__tag-count {
+    display: table-cell;
+    box-sizing: border-box;
+}
+
+.tag-cloud__tag-label {
+    z-index: 1;
+    padding: 5px 7px;
+    border-right: none;
+    text-transform: lowercase;
+}
+
+.tag-cloud__tag-count {
+    color: white;
+    width: 23px;
+    text-align: center;
+    background-color: $clr-sec;
+    background-color: #9ea6b2;
+    @extend %transition;
+    
+}

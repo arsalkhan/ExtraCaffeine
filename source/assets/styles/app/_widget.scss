@@ -1,0 +1,30 @@
+// .widget {
+//     background-color: $white;
+//     @extend %box-shadow; 
+//     width: 100%;
+//     .widget__link {
+//         display: block;
+//         font-size: em(11, 10);
+//         font-weight: 900;
+//         padding: em(15, 10);
+//         text-transform: uppercase;
+//         @extend %transition;
+//         &:hover {
+//             color: $clr-pri;
+//             background-color: $gray-dark;
+//         }
+//     }
+// }
+
+.widget {
+    padding: 25px 15px;
+    border-bottom: $border-gray;
+    .widget__title {
+        font-size: 18px;
+        padding-bottom: 15px;
+    }
+}
+
+.widget.widget--no-border {
+    border-bottom-color: transparent;
+}

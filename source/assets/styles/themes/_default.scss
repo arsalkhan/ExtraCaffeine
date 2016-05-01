@@ -1,0 +1,41 @@
+/* Default Theme */
+$gray-light: #eff1f5;
+
+// Theme styles goes here
+// colors
+$clr-light: #e6e6e5 ;
+// corporate colors
+$clr-pri: #ff4165;
+$clr-sec: #2a2d33;
+// $clr-accent: ;
+$clr-green: #06ba6f;
+
+$clr-links: #2a5599;
+$clr-body: $clr-sec;
+// backgrounds
+$bg-body: $clr-light;
+// fonts
+$font-pri: 'ProximaNova', $sans-serif;
+// $font-sec: ;
+// paths
+$path-images: "../images/";
+
+$container: 1200px;
+
+
+$transition: all 0.5s ease;
+$border-radius: 3px;
+$border: 1px solid $gray-light;
+$border-gray: 1px solid $gray-light;
+$border-dark: 1px solid $clr-sec;
+
+$border-heading: #e0e0e0 !default;
+$border-clr:     #f3f3f3 !default; 
+
+
+// Transition:
+
+$default-tr-property: all;
+$default-tr-duration: 0.5s;
+$default-tr-function: ease;
+$default-tr-delay: 0;
